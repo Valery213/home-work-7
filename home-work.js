@@ -15,16 +15,16 @@ array1.map((value, key) => {
 		population: array2[2],
 		area:   	array2[3],
 	}
-	states[key] 	  = state[key];
+	states[key] 	   = state[key];
 	generalPopulation += Number.parseFloat(array2[2]);
 	totalArea 		  += Number.parseFloat(array2[3]);
 })
 
-function NewCountry (name, generalPopulation, totalArea, capital) {
-	this.name 			   = name;
-	this.generalPopulation = generalPopulation + 'млн';
-	this.totalArea 		   = totalArea + 'тыс.кв.км';
-	this.capital 		   = capital;
+function NewCountry (name, population, area, capital) {
+	this.name 		= name;
+	this.population = population + 'млн';
+	this.area 		= area 		 + 'тыс.кв.км';
+	this.capital 	= capital;
 }
 
 const newCountry = new NewCountry('Лонг Лендс', generalPopulation, totalArea, 'Минск');
